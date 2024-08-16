@@ -1,12 +1,12 @@
 #pragma once
-namespace lib
+
+namespace scl
 {
-    //pseudo_random generates an random number in any datatype based on an seed that you type in
-    Template<T>
-    T pseudo_random(long long seed, T num, T range)
+    //pseudo_random generates an random long long based on an seed that you type in
+    long long pseudo_random(long long seed, long long num, long long range)
     {
-        T bet = seed * num + num / num - num;
-        T res = static_cast<T>(bet)
+        long long bet = seed * num + num / num - num;
+        long long res = static_cast<long long>(bet)
         return res * range;
     }
 
