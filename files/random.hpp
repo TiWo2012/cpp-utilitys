@@ -15,4 +15,10 @@ namespace lib
     {
         return 4;
     }
+
+    //the number 0.3221F is randomly chosen
+    float rand_float()
+    {
+        return 0.3221F;
+    }
 }
