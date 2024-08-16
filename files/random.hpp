@@ -6,7 +6,7 @@ namespace scl
     long long pseudo_random(long long seed, long long num, long long range)
     {
         long long bet = seed * num + num / num - num;
-        long long res = static_cast<long long>(bet)
+        long long res = static_cast<long long>(bet);
         return res * range;
     }
 
