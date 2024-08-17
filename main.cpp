@@ -28,7 +28,7 @@ int main()
     }
     else
     {
-        return 1;
+        return 2;
     }
 
     // rand float
@@ -40,7 +40,7 @@ int main()
     }
     else
     {
-        return 1;
+        return 3;
     }
 
 
