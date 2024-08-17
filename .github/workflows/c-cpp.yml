@@ -15,6 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: make
-        run: g++ -o main main.cpp
+        run: |
+          g++ -o main main.cpp
+          chmod +x main
       - name: check
         run: /bin/bash ./main
