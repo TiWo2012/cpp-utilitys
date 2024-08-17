@@ -4,15 +4,15 @@
 
 imt main()
 {
-    scl::clear()
+    scl::console::clear()
 
-    scl::write("test")
+    scl::console::write("test")
 
     while (true)
     {
-        scl::write_new_frame("test .");
-        scl::write_new_frame("test ..");
-        scl::write_new_frame("test ...");
+        scl::console::write_new_frame("test .");
+        scl::console::write_new_frame("test ..");
+        scl::console::write_new_frame("test ...");
     }
 
     return 0;
