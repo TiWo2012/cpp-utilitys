@@ -3,6 +3,10 @@
 
 namespace scl
 {
+    namespace console
+    {
+        
+    }
     // clears tehr curent terminal frame
     void clear()
     {

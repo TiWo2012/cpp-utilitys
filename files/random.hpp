@@ -2,6 +2,10 @@
 
 namespace scl
 {
+    namespace random
+    {
+        
+    }
     //pseudo_random generates an random long long based on an seed that you type in
     long long pseudo_random(long long seed, long long num, long long range)
     {
