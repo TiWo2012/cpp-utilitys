@@ -8,7 +8,7 @@
 int main()
 {
     // example on how to use the random part of the library combined with console output
-    int rand_num = scl::random::rand_int();
+    int rand_num = scl::Random::Rand_int();
 
     // Convert integer to string
     std::string rand_num_str = std::to_string(rand_num);

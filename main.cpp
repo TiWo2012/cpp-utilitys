@@ -6,17 +6,6 @@
 #include "files/console.hpp"
 #include "files/random.hpp"
 
-namespace random {
-    long long pseudo_random(long long seed, long long num, long long range) {
-        long long bet = seed * num + num / num - num;
-        return bet * range;
-    }
-
-    int rand_int() { return 4; }
-
-    float rand_float() { return 0.3221F; }
-} // namespace random
-
 void test_console_clear() {
     std::cout << "Test clear() - Dieser Test kann visuell überprüft werden.\n";
     scl::console::clear();
@@ -112,7 +101,7 @@ void test_random_pseudo_random() {
     
     long long expected_result = (seed * num + num / num - num) * range;
     
-    long long result = scl::random::pseudo_random(seed, num, range);
+    long long result = scl::Random::pseudo_random(seed, num, range);
     
     assert(result == expected_result && "pseudo_random() fehlgeschlagen");
     std::cout << "pseudo_random() funktioniert korrekt.\n";
@@ -122,7 +111,7 @@ void test_random_rand_int() {
     std::cout << "Test rand_int()\n";
     
     int expected_result = 4;
-    int result = scl::random::rand_int();
+    int result = scl::Random::Rand_int();
     
     assert(result == expected_result && "rand_int() fehlgeschlagen");
     std::cout << "rand_int() funktioniert korrekt.\n";
@@ -132,7 +121,7 @@ void test_random_rand_float() {
     std::cout << "Test rand_float()\n";
     
     float expected_result = 0.3221F;
-    float result = scl::random::rand_float();
+    float result = scl::Random::Rand_float();
     
     assert(abs(result - expected_result) < 1e-4 && "rand_float() fehlgeschlagen");
     std::cout << "rand_float() funktioniert korrekt.\n";
