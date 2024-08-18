@@ -2,9 +2,12 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - '*'
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - development
+      - main
 
 jobs:
   build:
@@ -13,7 +16,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: make
-        run: make
-      - name: make check
-        run: make check
+
+      - name: Set up GCC
+        run: sudo apt-get install g++ -y
+
+      - name: Build
+        run: |
+          g++ -o main main.cpp
+          chmod +x main
+
+      - name: Run Tests
+        run: |
+          ./main || exit 1
