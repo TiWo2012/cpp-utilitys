@@ -2,11 +2,11 @@
 
 #include "../files/console.hpp"
 
-imt main()
+int main()
 {
-    scl::console::clear()
+    scl::console::clear();
 
-    scl::console::write("test")
+    scl::console::write("test");
 
     while (true)
     {
