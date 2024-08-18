@@ -2,7 +2,8 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ "development" ]
+    branches:
+      - '*'
   pull_request:
     branches: [ "development", "main" ]
 
@@ -14,6 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: make
-        run: g++ -o main main.cpp
+        run:
+          g++ -o main main.cpp &&
+          chmod +x main
       - name: check
-        run: ./main
+        run: /bin/bash ./main
