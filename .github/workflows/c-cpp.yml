@@ -5,7 +5,9 @@ on:
     branches:
       - '*'
   pull_request:
-    branches: [ "development", "main" ]
+    branches:
+      - development
+      - main
 
 jobs:
   build:
@@ -14,9 +16,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: make
-        run:
-          g++ -o main main.cpp &&
+
+      - name: Set up GCC
+        run: sudo apt-get install g++ chmod -y
+
+      - name: Build
+        run: |
+          g++ -o main main.cpp
           chmod +x main
-      - name: check
-        run: /bin/bash ./main
+
+      - name: Run Tests
+        run: |
+          ./main || exit 1
