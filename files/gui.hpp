@@ -9,9 +9,11 @@ namespace scl
     {
         struct vars
         {
+            SDL_Window* window;
+        };
 
-        }
-
-
+        
     }
 }
+
+SDL_Window* window;
