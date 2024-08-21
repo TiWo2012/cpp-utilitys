@@ -1,6 +1,6 @@
 #include <SDL2/SDL.h>
 #include <iostream>
-#include "files/console.hpp"
+#include "../files/console.hpp"
 
 int main() {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
