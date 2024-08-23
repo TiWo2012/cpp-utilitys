@@ -6,5 +6,3 @@ just some simple cpp utilitys for me and any other person. you cann use the as y
 <br>
 lock at the examples in the example folder
 <span style="color: red">for posibly unstable but newer files pls checkout the development branch!</span>
-
-* do not include the gui one. it is still work in progress 
